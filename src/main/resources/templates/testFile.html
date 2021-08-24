@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Протестировать программу</title>
+</head>
+<body>
+
+<form method="post" enctype="multipart/form-data" action="/test">
+    <input type="file" name="program">
+    <br>
+    <input type="number" name="labNum">
+    <br>
+    <input type="number" name="variant">
+    <br>
+    <input type="number" name="mod" value="0">
+    <br>
+    <input type="submit">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+</form>
+
+</body>
+</html>
